@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>01_basicweb</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  <!--
+  	서블릿 등록하기
+  	<servlet>태그를 이요
+  		<servlet-name>서블릿을 지정하는 이름(변수명)</servlet-name>
+  		<servlet-class>클래스명(패키지명.클래스명)</servlet-class>
+  	</servlet> 
+   -->
+   <servlet>
+   		<servlet-name>firstweb</servlet-name>
+   		<servlet-class>com.basicweb.controller.FirstController</servlet-class>
+   </servlet>
+   
+   <!-- 서블릿을 이용할 수 있는 url주소를 등록 -->
+   <!--
+   		<servlet-mapping>특정서블릿과 연결된 url주소를 설정
+   			<servlet-name>서블릿에 설정된 이름</servlet-name>
+   			<url-pattern>/url주소(명칭.do)</url-pattern>
+   		</servlet-mapping> 
+    -->
+    <servlet-mapping>
+    	<servlet-name>firstweb</servlet-name>
+    	<url-pattern>/first.do</url-pattern>
+    </servlet-mapping>
+</web-app>
